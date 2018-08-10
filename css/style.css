@@ -10,8 +10,10 @@ a {
 }
 
 #problemText {
+    margin: 3%;
     border: 1px solid black;
-    background-color: gainsboro;
+    background-color: #308ACB;
+    box-shadow: 3px 3px dimgray;
 }
 
 #problemText p{
@@ -28,6 +30,52 @@ a {
     font-size: 15px;
 }
 
+#usersRanking {
+    background-color: lightgray;
+    background-blend-mode: darken;
+    border-collapse: collapse;
+    width: 80%;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    text-align: center;
+}
+
+#problemBox {
+    color: white;
+    background-color: #308ACB;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 20px;
+    margin-left: 7%;
+}
+
+#correct-answer {
+    background-color: #308ACB;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 3%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#community-on {
+    padding: 6px;
+    background-color: #0060a5;
+}
+
+#community-off {
+    padding: 6px;
+    background-color: #308ACB;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #problemsTable tr {
     border-bottom: 1px solid #ddd;
 }
@@ -42,7 +90,8 @@ a {
 }
 
 .tableHeader {
-    width: 25%;
+    width: 40%;
+    text-align: center;
 }
 
 #bodyTitles {
@@ -110,13 +159,13 @@ a {
 }
 
 #problemTitle {
-    background-color: gainsboro;
-    margin-top: 2%;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    margin: 3%;
+    background-color: #308ACB;
+    border: 1px solid black;
     padding-left: 1.7%;
     padding-top: 0.2%;
+    color: white;
+    box-shadow: 3px 3px dimgray;
 }
 
 #top-header {

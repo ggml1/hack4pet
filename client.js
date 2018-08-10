@@ -7,7 +7,8 @@ function answerP1() {
 		window.location.assign('../../AC.html');
 	}
 	else {
-		window.location.assign('../../WA.html');
+        alert("Wrong answer. Please, try again.");
+//		window.location.assign('../../WA.html');
 	}
 }
 

@@ -1,9 +1,90 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-	<title>AC</title>
-</head>
-<body>
-	<h1> AC IN ONE GO</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Mathforces</title>
+<!--        <link rel="icon" href="https://icon-icons.com/icons2/509/PNG/512/GooglePlus_G_icon-icons.com_49945.png">-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab" rel="stylesheet">
+        <script>
+            function dropdownFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+            <div class="row" id="top-header">
+                <div class="col-md-4">
+                    <span id="top-header-text">
+                        MΔTHFORCES
+                    </span>
+                </div>
+                <div class="col-md-5"></div>
+                <div class="col-md-1">
+                    <button type="button" class="sign-in">
+                        <a href="../../sign-in.html">SIGN IN</a>
+                    </button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="sign-up">
+                        <a href="../../sign-up.html">SIGN UP</a>
+                    </button>    
+                </div>
+            </div>
+            <div class="row" id="menu">
+<!--                308ACB-->
+                <div class="col-md-1" id="home-off">
+                    <a href="index.html">HOME</a>
+                </div>
+                <div class="col-md-1" id="problems-off">
+                    <a href="problems.html">PROBLEMS</a>
+                </div>
+                <div class="col-md-1" id="contests-off">
+                    <a href="contests.html">CONTESTS</a>
+                </div>
+                <div class="col-md-1" id="community-off">
+                    <a href="community.html">COMMUNITY</a>
+                </div>
+                <div class="col-md-8" id="home-off">
+                </div>
+            </div>
+            <div class="row" id="correct-answer">
+                <img src="css/img/green_check_mark.png" class="center">
+            </div>
+            <div id="correct-answer">
+                <h3>Expected solution:</h3>
+                <br>
+                <p> It is known that $ \frac{x}{1 + x^2} $ equals to the first derivative of $ \ln{\frac{1 + x^2}{2}} $. Therefore, $I$ = $\int_{4}^5 f(x) dx $ equals $\ln{\frac{1 + x^2}{2}}$ - $\ln{\frac{1 + x^2}{2}}$.
+                </p>
+            </div>
+        </div>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+            });
+        </script>
+        <script type="text/javascript" src="MathJax-master/MathJax.js?config=TeX-AMS_HTML-full"></script>
+          
+        <script src = "../../server.js"></script>
+        <script src = "../../client.js"></script>
+    </body>
 </html>
