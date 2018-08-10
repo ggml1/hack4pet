@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Mathforces</title>
+<!--        <link rel="icon" href="https://icon-icons.com/icons2/509/PNG/512/GooglePlus_G_icon-icons.com_49945.png">-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+            <div class="row" id="top-header">
+                <div class="col-md-4">
+                    <span id="top-header-text">
+                        MΔTHFORCES
+                    </span>
+                </div>
+                <div class="col-md-5"></div>
+                <div class="col-md-1">
+                    <button type="button" class="sign-in">
+                        <a href="sign-in.html">SIGN IN</a>
+                    </button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="sign-up">
+                        <a href="sign-up.html">SIGN UP</a>
+                    </button>    
+                </div>
+            </div>
+            <div class="row" id="menu">
+<!--                308ACB-->
+                <div class="col-md-1" id="home-off">
+                    <a href="index.html">HOME</a>
+                </div>
+                <div class="col-md-1" id="problems-on">
+                    <a href="problems.html">PROBLEMS</a>
+                </div>
+                <div class="col-md-1" id="contests-off">
+                    <a href="contests.html">CONTESTS</a>
+                </div>
+                <div class="col-md-9" id="home-off">
+                </div>
+            </div>
+            <div class="row" id="site-body">
+                <div class="col-md-8" id="blue-squares"> 
+<!--
+                    <button type="button" class="problem">
+                        <a href="./MathJax-master/problems/problem1.html">Test Problem</a>
+                    </button>
+-->
+                    <table id="problemsTable">
+                        <tr class="tableHeader">
+                            <th style="width:25%;">Name</th>
+                            <th style="width:10%;">Level</th>
+                            <th style="width:28%;">University</th>
+                            <th style="width:20%;">Country</th>
+                            <th style="width:16%;">Topic</th>
+                            <th style="width:25%;">Users activity<br>(solved/tried)</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="./MathJax-master/problems/problem1.html">Serra's Integral</a>
+                            </td>
+                            <td>1</td>
+                            <td>UFPE</td>
+                            <td>Brazil</td>
+                            <td>Geometry</td>
+                            <td><strong><font color="green">5</font> / <font color="red">5</font></strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="./MathJax-master/problems/problem2.html">Problem 2</a>
+                            </td>
+                            <td>2</td>
+                            <td>Tsinghua University</td>
+                            <td>China</td>
+                            <td>Combinatorics</td>
+                            <td><strong><font color="green">0</font> / <font color="red">5</font></strong></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-3" id="filters">
+                    FILTERS<br>
+                    <div id="listA" class="dropdown-check-listA" tabindex="100">
+                        <span class="anchorA">Country</span>
+                        <ul id="itemsA" class="itemsA">
+                            <li><input type="checkbox" value="Brazil"/>Brazil</li>
+                            <li><input type="checkbox" value="China"/>China</li>
+                            <li><input type="checkbox" value="Russia"/>Russia</li>
+                            <li><input type="checkbox" value="Japan"/>Japan</li>
+                        </ul>
+                    </div><br>
+                    <div id="listB" class="dropdown-check-listB" tabindex="100">
+                        <span class="anchorB">University</span>
+                        <ul id="itemsB" class="itemsB">
+                            <li><input type="checkbox" value="UFPE"/>UFPE</li>
+                            <li><input type="checkbox" value="Tsinghua University"/>Tsinghua University</li>
+                            <li><input type="checkbox" value="Saint Petersburg's ITMO"/>Saint Petersburg's ITMO</li>
+                            <li><input type="checkbox" value="Peking University"/>Peking University</li>
+                        </ul>
+                    </div><br>
+                    <div id="listC" class="dropdown-check-listC" tabindex="100">
+                        <span class="anchorC">Topic</span>
+                        <ul id="itemsC" class="itemsC">
+                            <li><input type="checkbox" value="Geometry"/>Geometry</li>
+                            <li><input type="checkbox" value="Combinatorics"/>Combinatorics</li>
+                            <li><input type="checkbox" value="Algebra"/>Algebra</li>
+                            <li><input type="checkbox" value="Calculus"/>Calculus</li>
+                        </ul>
+                    </div><br>
+                    <div id="listD" class="dropdown-check-listD" tabindex="100">
+                        <span class="anchorD">Level</span>
+                        <ul id="itemsD" class="itemsD">
+                            <li><input type="checkbox" value="1"/>1</li>
+                            <li><input type="checkbox" value="2"/>2</li>
+                            <li><input type="checkbox" value="3"/>3</li>
+                            <li><input type="checkbox" value="4"/>4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            var checklistA, checklistB, checklistC, checklistD;
+            var itemsA, itemsB, itemsC, itemsD;
+            
+            checkListA = document.getElementById('listA');
+            itemsA = document.getElementById('itemsA');
+
+            checkListA.getElementsByClassName('anchorA')[0].onclick = function (evt) {
+                if (itemsA.classList.contains('visible')){
+                    itemsA.classList.remove('visible');
+                    itemsA.style.display = "none";
+                }
+
+                else{
+                    itemsA.classList.add('visible');
+                    itemsA.style.display = "block";
+                }
+            }
+
+            itemsA.onblur = function(evt) {
+                itemsA.classList.remove('visible');
+            }
+            
+            checkListB = document.getElementById('listB');
+            itemsB = document.getElementById('itemsB');
+
+            checkListB.getElementsByClassName('anchorB')[0].onclick = function (evt) {
+                if (itemsB.classList.contains('visible')){
+                    itemsB.classList.remove('visible');
+                    itemsB.style.display = "none";
+                }
+
+                else{
+                    itemsB.classList.add('visible');
+                    itemsB.style.display = "block";
+                }
+            }
+
+            itemsB.onblur = function(evt) {
+                itemsB.classList.remove('visible');
+            } 
+            
+            checkListC = document.getElementById('listC');
+            itemsC = document.getElementById('itemsC');
+
+            checkListC.getElementsByClassName('anchorC')[0].onclick = function (evt) {
+                if (itemsC.classList.contains('visible')){
+                    itemsC.classList.remove('visible');
+                    itemsC.style.display = "none";
+                }
+
+                else{
+                    itemsC.classList.add('visible');
+                    itemsC.style.display = "block";
+                }
+            }
+
+            itemsC.onblur = function(evt) {
+                itemsC.classList.remove('visible');
+            } 
+            
+            checkListD = document.getElementById('listD');
+            itemsD = document.getElementById('itemsD');
+
+            checkListD.getElementsByClassName('anchorD')[0].onclick = function (evt) {
+                if (itemsD.classList.contains('visible')){
+                    itemsD.classList.remove('visible');
+                    itemsD.style.display = "none";
+                }
+
+                else{
+                    itemsD.classList.add('visible');
+                    itemsD.style.display = "block";
+                }
+            }
+
+            itemsD.onblur = function(evt) {
+                itemsD.classList.remove('visible');
+            }
+            
+            $('input[type=checkbox]').click(function() {
+                var nenhumaAtiva = true;
+                $('#problemsTable tr:not(:first-child)').hide();
+                $('input[type=checkbox]').each(function() {
+                    if (this.checked) {
+                        nenhumaAtiva = false;
+                        var value = $(this).attr('value');
+//                        $('td.' + value).parent('tr').show();
+                        $('#problemsTable td').each(function() {
+                            var cellText = $(this).html();
+                            if (cellText == value) {
+                                $(this).parent('tr').show();
+                            }
+                        });
+                    }
+                });
+                if (nenhumaAtiva) {
+                    $('tr').show();
+                }
+            });
+        </script>
+    </body>
+</html>

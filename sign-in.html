@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Mathforces</title>
+<!--        <link rel="icon" href="https://icon-icons.com/icons2/509/PNG/512/GooglePlus_G_icon-icons.com_49945.png">-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab" rel="stylesheet"> 
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+            <div class="row registration-container">
+                <div class="col-md-6">
+                    <div id="sign-in-title">MΔTHFORCES</div>
+                    <span class="reg-forms-text">
+                        <span>Username:</span>
+                        <form>
+                            <input type = "text" name="E.g.: ggml" id= "username">
+                        <span>Password:</span>
+                            <input type = "password" name="user-pw" id= "password">
+                        </form>
+                    </span>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary" id="sign_in_button" onClick = "tryLogin()">
+                        Login
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src = "server.js"></script>
+        <script src = "client.js"></script>
+    </body>
+</html>
